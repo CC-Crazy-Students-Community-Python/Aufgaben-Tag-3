@@ -4,7 +4,7 @@
 import random
 import os
 
-def factorial( zahl ): 
+def factorial( zahl ):
     match zahl:
         case z if z < 0:
             # return "Negative Fakultäten gibt es nicht"
@@ -14,7 +14,7 @@ def factorial( zahl ):
         case other:
             factor = 1
             while( zahl > 1 ):
-                factor *= zahl 
+                factor *= zahl
                 zahl -= 1
             return factor
 
