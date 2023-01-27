@@ -1,4 +1,3 @@
-
 # Übung Algorithmen
 
 Alle angegebenen Übungen sind unabhängig zueinander. Sie
@@ -64,3 +63,9 @@ eine echte Programmiersprache (z.B. Python)
   o
   Schauen Sie sich die Algorithmen Bubblesort und
   Quicksort einmal an. Versuchen sie diese in Python umzusetzen.
+
+# Übung Fehler analysieren und beheben
+
+1. Bearbeiten Sie die Datei „Übung Doctest Einstieg.py“
+2. Bearbeiten Sie die Datei „Übung Doctest Fibonacci.py“
+3. Bearbeiten Sie die Datei „Übung Doctest Primzahlen.py“
