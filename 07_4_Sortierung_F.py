@@ -56,3 +56,4 @@ print( yellow( "Sortierte Liste mit Quick Sort Algorithmus" ) )
 print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
 print( *einkaufsliste )
 print( *gehaltsliste )
+

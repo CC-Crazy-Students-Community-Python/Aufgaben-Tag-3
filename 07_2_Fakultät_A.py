@@ -7,7 +7,8 @@ import os
 def factorial( zahl ): 
     match zahl:
         case z if z < 0:
-            print( "Negative Fakultäten gibt es nicht" )
+            # return "Negative Fakultäten gibt es nicht"
+            raise ValueError( "Es gibt keine negativen Fakultäten" )
         case z if z == 0:
             return 1
         case other:
@@ -17,15 +18,13 @@ def factorial( zahl ):
                 zahl -= 1
             return factor
 
-zahlen = {
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 ),
-    random.randint( 1, 20 )
-}
+# hier unterschied zwischen dic und array, dic wird vor der ausführung sortiert und dann sortiert auwgegeben
+# dic läuft zeile für zeile ab
+zahlen = [
+    5,
+    -3,
+    10
+]
 
 os.system( "cls" )
 

@@ -19,7 +19,7 @@ def black( input ):
 
 system( "cls" )
 
-def colors( color ):
+def colors( color = "" ):
     color = color.lower()
     match color:
         case "reset":
