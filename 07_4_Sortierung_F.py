@@ -26,45 +26,33 @@ from mycolors import *
 einkaufsliste = [ "Brot", "Wurst", "Eier", "Milch", "Käse", "Nutella", "Bier" ]
 gehaltsliste = [ 1700, 2500, 2100, 2100, 1200, 1800, 3500 ]
 
-def quickSort( liste ):
-    swapped = False
-    for arr in range( len( liste ) ):
-        for elem in range( 0, len(liste) - arr - 1 ):
-            if liste[ elem ] > liste[ elem + 1 ]:
-                temp = liste[ elem ]
-                liste[ elem ] = liste[ elem + 1 ]
-                liste[ elem + 1 ] = temp
-                swapped = True
-        if not swapped:
-            break
+def partition(array, begin, end):
+    pivot = begin
+    for i in range(begin+1, end+1):
+        if array[i] <= array[begin]:
+            pivot += 1
+            array[i], array[pivot] = array[pivot], array[i]
+    array[pivot], array[begin] = array[begin], array[pivot]
+    return pivot
 
-def quickSort_desc( liste ):
-    swapped = False
-    for arr in range( len( liste ) ):
-        for elem in range( 0, len(liste) - arr - 1 ):
-            if liste[ elem ] < liste[ elem + 1 ]:
-                temp = liste[ elem ]
-                liste[ elem ] = liste[ elem + 1 ]
-                liste[ elem + 1 ] = temp
-                swapped = True
-        if not swapped:
-            break
+def quicksort(array, begin=0, end=None):
+    if end is None:
+        end = len(array) - 1
+    def _quicksort(array, begin, end):
+        if begin >= end:
+            return
+        pivot = partition(array, begin, end)
+        _quicksort(array, begin, pivot-1)
+        _quicksort(array, pivot+1, end)
+    return _quicksort(array, begin, end)
 
 system( "cls" )
 
-bubbleSort( einkaufsliste )
-bubbleSort( gehaltsliste )
+quicksort( einkaufsliste )
+quicksort( gehaltsliste )
 
 print( green( "-----------------------------" ) )
 print( yellow( "Sortierte Liste mit Quick Sort Algorithmus" ) )
 print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
 print( *einkaufsliste )
 print( *gehaltsliste )
-
-bubbleSort_desc( einkaufsliste )
-bubbleSort_desc( gehaltsliste )
-
-print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
-print( *einkaufsliste )
-print( *gehaltsliste )
-print( green( "-----------------------------" ) )
