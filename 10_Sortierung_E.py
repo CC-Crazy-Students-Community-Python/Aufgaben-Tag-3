@@ -56,9 +56,3 @@ print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
 print( *einkaufsliste )
 print( *gehaltsliste )
 print( green( "-----------------------------" ) )
-
-
-
-
-
-

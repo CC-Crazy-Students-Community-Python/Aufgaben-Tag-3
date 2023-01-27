@@ -1,11 +1,11 @@
 # •	Entwickeln Sie einen Algorithmus, der die Fakultät einer beliebigen Zahl berechnen kann
-#   o	Nutzen Sie als Entwurfsmuster die Rekursion
+#   o	Nutzen Sie als Entwurfsmuster die Rekursion, leider maximal 995 ansonsten kommt Error
 
 import random
 import os
 
 def factorial( zahl ): 
-    return 1 if ( zahl == 1 or zahl == 0) else zahl * factorial( zahl - 1 )
+    return 1 if ( zahl <= 1 ) else zahl * factorial( zahl - 1 )
 
 zahlen = {
     random.randint( 1, 20 ),
