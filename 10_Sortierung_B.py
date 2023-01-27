@@ -5,21 +5,27 @@
 from os import system
 from mycolors import *
 
-einkaufsliste = [ "Brot", "Wurst", "Eier", "Milch", "Käse", "Nutella", "Bier" ]
-gehaltsliste = [ 1700, 2500, 2100, 2100, 1200, 1800, 3500 ]
+students = [
+    "Michael",
+    "Peter",
+    "Stephan",
+    "Markus"
+]
 
-def sort_asc( liste ):
-    return sorted( liste )
+def sort_asc( liste, getter ):
+    return sorted( liste, key=getter.__getitem__ )
 
-def sort_desc( liste ):
-    return sorted( liste, reverse=True )
+def sort_desc( liste, getter ):
+    return sorted( liste, reverse=True, key=getter.__getitem__ )
+
+newgrades = { "Markus": "1", "Michael": "6", "Peter": "1", "Stephan": "4" }
 
 system( "cls" )
 
 print( green( "--------------------------" ) )
-print( yellow( "Sortierte Liste je nach Funktion" ) )
+print( yellow( "Sortierte Liste je nach Item" ) )
 print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
-print( *sort_desc( gehaltsliste ) )
+print( *sort_desc( students, newgrades ) )
 print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
-print( *sort_asc( einkaufsliste ) )
+print( *sort_asc( students, newgrades ) )
 print( green( "--------------------------" ) )
