@@ -8,13 +8,13 @@ fibonacci_zahlen=[]
 def fibo( fib ):
     return int( ( ( ( 1 + sqrt( 5 ) ) ** fib ) - ( ( 1 - sqrt( 5 ) ) ** fib ) ) / ( 2 ** fib * sqrt( 5 ) ) )
 
-def fibonacci( fibn ):
-    n = 0
-    cur = fibo( n )
-    for i in range( 20 ):
+def fibonacci( max ):
+    fibn = 0
+    cur = fibo( fibn )
+    for i in range( max ):
         fibonacci_zahlen.append( cur )
-        n += 1
-        cur = fibo( n )
+        fibn += 1
+        cur = fibo( fibn )
     return fibonacci_zahlen
 
 os.system( "cls" )

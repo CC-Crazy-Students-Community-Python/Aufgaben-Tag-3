@@ -4,10 +4,10 @@
 import os
 fibonacci_zahlen=[]
 
-def fibonacci( fibn ):
+def fibonacci( max ):
     erste = 1
     zweite = 1
-    for fib in range( fibn ):
+    for fib in range( max ):
         match fib:
             case 1: fib = "0"
             case 2: fib = "0", "1"
