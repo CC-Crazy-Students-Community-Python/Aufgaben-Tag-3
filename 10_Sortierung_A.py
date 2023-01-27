@@ -16,10 +16,10 @@ def sort_desc( liste ):
 
 system( "cls" )
 
-print( green( "--------------------------" ) )
+print( green( "-----------------------------" ) )
 print( yellow( "Sortierte Liste je nach Funktion" ) )
 print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
 print( *sort_desc( gehaltsliste ) )
 print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
 print( *sort_asc( einkaufsliste ) )
-print( green( "--------------------------" ) )
+print( green( "-----------------------------" ) )

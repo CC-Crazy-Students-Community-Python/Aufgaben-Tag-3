@@ -6,6 +6,7 @@ from os import system
 from mycolors import *
 
 students = [ ( "Michael", "6", "12" ), ( "Peter", "1", "25" ), ( "Stephan", "4", "18" ), ( "Markus", "1", "14" ) ]
+students2 = students.copy()
 
 def sort_asc( liste, dim ):
     return sorted( liste, key=lambda list: list[ dim ] )
@@ -16,15 +17,11 @@ def sort_desc( liste, dim ):
 system( "cls" )
 
 print( green( "-----------------------------" ) )
-print( yellow( "Sortierte Liste je nach Dimension (Alter)" ) )
-print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
-print( *sort_desc( students, 2 ) )
+print( yellow( "Sortierte Liste kopiert aus original Liste" ) )
 print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
-print( *sort_asc( students, 2 ) )
+print( *sort_asc( students2, 2 ) )
 print( green( "-----------------------------" ) )
-print( yellow( "Sortierte Liste je nach Dimension (Note)" ) )
-print( green( "---" ) + cyan( "DESC" ) + green( "----------------------" ) )
-print( *sort_desc( students, 1 ) )
-print( green( "---" ) + cyan( "ASC" ) + green( "-----------------------" ) )
-print( *sort_asc( students, 1 ) )
+print( yellow( "Original Liste" ) )
+print( green( "-----------------------------" ) )
+print( *students )
 print( green( "-----------------------------" ) )
